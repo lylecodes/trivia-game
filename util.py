@@ -34,7 +34,6 @@ def prompt_user():
     difficulty_choice = ""
     while difficulty_choice == "":
         difficulty_choice = input("\n>")
-    difficulty = difficulties[int(difficulty_choice)]
     clear()
 
     print("Select a type:")
@@ -53,7 +52,7 @@ def prompt_user():
     print("Building game...")
 
     return {'num_questions': num_questions,
-            "category": category_choice,
+            "category": category,
             "difficulty": difficulty_choice,
             "type_choice": type_choice}
 

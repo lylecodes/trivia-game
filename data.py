@@ -6,7 +6,6 @@ def fetch_question_data(user_input):
     category = user_input['category']
     difficulty = user_input['difficulty']
     quiz_type = user_input['type_choice']
-
     url = f'https://opentdb.com/api.php?amount={num_questions}&category={category}&difficulty={difficulty}&type={quiz_type}'
     res = requests.get(url).json()
     return format_data(res)
